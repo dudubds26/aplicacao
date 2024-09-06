@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './css/Home.css';
 import Logo from '../assets/logo-com-fagro.svg';
+import Logo2 from '../assets/logo-sem-fagro.svg';
 
 const Home = () => {
   return (
@@ -26,7 +27,19 @@ const Home = () => {
           </div>
 
         </header>
-          <Link to="/login">Login</Link>
+
+        <main className='main-home'>
+          <div>
+            <img src={Logo2} alt="logo" />
+          </div>
+
+          <h1>Colhido com Amor, <br /> Entregue com Carinho.</h1>
+
+          <div className="buttons">
+            <Link to="/login" className='btn'>Login</Link>
+            <Link to="/signup" className='btn'>Cadastre-se</Link>
+          </div>
+        </main>
       </div>
     </>
   );
