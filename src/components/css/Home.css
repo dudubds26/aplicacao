@@ -54,6 +54,11 @@ img {
 
 .nav-home a, .right-home a {
   color: #005429;
+  transition: .3s;
+}
+
+.nav-home a:hover, .right-home a:hover {
+  color: #0e7e44;
 }
 
 .nav-home li + li {
@@ -98,4 +103,10 @@ img {
   text-align: center;
   border-radius: 8px;
   font-weight: 600;
+  transition: .2s;
+}
+
+.btn:hover {
+  background-color: #009648;
+  transform: scale(102%);
 }

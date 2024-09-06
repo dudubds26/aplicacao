@@ -36,7 +36,7 @@ const Home = () => {
           <h1>Colhido com Amor, <br /> Entregue com Carinho.</h1>
 
           <div className="buttons">
-            <Link to="/login" className='btn'>Login</Link>
+            <Link to="/login" className='btn'>Entrar</Link>
             <Link to="/signup" className='btn'>Cadastre-se</Link>
           </div>
         </main>
