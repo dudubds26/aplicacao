@@ -84,3 +84,9 @@
 .login-btn:hover {
   color: #00A651;
 }
+
+.error {
+  color: #ff0000;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
