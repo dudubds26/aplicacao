@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .catalog-container {
   background-color: #FFFFF4;
   min-height: 100vh;
@@ -69,22 +75,49 @@
 }
 
 .catalog-grid {
+  max-width: 1400px;
+  height: 88vh;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
   padding: 20px;
 }
 
 .catalog-item {
+  width: 80%;
   padding: 15px;
   border: 1px solid #00A651;
   border-radius: 8px;
   background-color: #C1FF72;
   text-align: center;
+
+}
+
+.catalog-item img {
+  width: 180px;
+  justify-self: center;
+  border-radius: 50%;
+  margin: 5px auto;
+}
+
+.catalog-item h3 {
+  font-family: 'League Spartan';
+  font-size: 1.5rem;
+}
+
+.catalog-item .price {
+  font-weight: 600;
+}
+
+.catalog-item p {
+  font-weight: 500;
 }
 
 .buy-button {
-  margin-top: 10px;
+  margin: 10px auto 0 auto;
   padding: 8px;
   background-color: #00A651;
   color: #FFFFF4;
@@ -92,6 +125,10 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.02rem;
 }
 
 .buy-button:hover {

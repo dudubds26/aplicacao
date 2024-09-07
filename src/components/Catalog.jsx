@@ -2,18 +2,26 @@ import React, { useState } from 'react';
 import './css/Catalog.css';
 import Logo from '../assets/logo-com-fagro.svg'
 import { Link } from 'react-router-dom'
-import morango from '../assets/morango.webp'
+import morango from '../assets/morango.png'
+import batata from '../assets/batata.png'
+import ovo from '../assets/ovo.png'
+import abacaxi from '../assets/abacaxi.png'
+import mandioca from '../assets/mandioca.png'
+import tomate from '../assets/tomate.png'
+import maca from '../assets/maca.png'
+import banana from '../assets/banana.png'
 
 const Catalog = () => {
   // Exemplo de lista de produtos
   const products = [
-    { id: 1, name: 'Morango', price: 'R$ 100,00', img: morango },
-    { id: 2, name: 'Banana', price: 'R$ 200,00', img: '' },
-    { id: 4, name: 'Maçã', price: 'R$ 300,00', img: '' },
-    { id: 5, name: 'Tomate', price: 'R$ 300,00', img: '' },
-    { id: 6, name: 'Mandioca', price: 'R$ 300,00', img: '' },
-    { id: 7, name: 'Ovo Caipira', price: 'R$ 300,00', img: '' },
-    { id: 8, name: 'Abacaxi', price: 'R$ 300,00', img: '' },
+    { id: 1, name: 'Morango', price: 'R$ 24,00 (1kg)', img: morango, produtor: 'Produtor' },
+    { id: 2, name: 'Banana', price: 'R$ 15,99 (1kg)', img: banana, produtor: 'Produtor' },
+    { id: 4, name: 'Maçã', price: 'R$ 11,99 (1kg)', img: maca, produtor: 'Produtor' },
+    { id: 5, name: 'Tomate', price: 'R$ 6,98 (1kg)', img: tomate, produtor: 'Produtor' },
+    { id: 6, name: 'Mandioca', price: 'R$ 2,99 (1kg)', img: mandioca, produtor: 'Produtor' },
+    { id: 7, name: 'Ovo Caipira', price: 'R$ 8,49 (12 un.)', img: ovo, produtor: 'Produtor' },
+    { id: 8, name: 'Abacaxi', price: 'R$ 11,99 (1 un.)', img: abacaxi, produtor: 'Produtor' },
+    { id: 9, name: 'Batata', price: 'R$ 6,65 (1kg)', img: batata, produtor: 'Produtor' },
   ];
 
   const [searchTerm, setSearchTerm] = useState('');
@@ -68,10 +76,11 @@ const Catalog = () => {
         {filteredProducts.map((product) => (
           <div key={product.id} className="catalog-item">
             <h3>{product.name}</h3>
-            <p>{product.price}</p>
-            <img src={product.img} alt="" />
+            <img src={product.img} />
+            <p className='price' >{product.price}</p>
+            <p>{product.produtor}</p>
             <button className="buy-button" onClick={() => addToCart(product)}>
-              Adicionar ao Carrinho
+              Adicionar ao Carrinho &ensp; <span class="material-symbols-outlined">add_shopping_cart</span>
             </button>
           </div>
         ))}
