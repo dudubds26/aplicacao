@@ -5,6 +5,7 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import Catalog from './components/Catalog';
 import Cart from './components/Cart';
+import Checkout from './components/Checkout'
 import ProtectedRoute from './components/ProtectedRoute';
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
           }
         />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </Router>
   );
