@@ -110,3 +110,161 @@ img {
   background-color: #009648;
   transform: scale(102%);
 }
+
+/* Responsividade para telas menores */
+
+/* Smartphones pequenos (até 576px) */
+@media (max-width: 576px) {
+  .home-header {
+    height: auto; /* Ajusta a altura do cabeçalho */
+    flex-wrap: wrap; /* Quebra linhas para elementos se ajustarem */
+    padding: 15px;
+    text-align: center;
+  }
+
+  .left-home, .right-home {
+    flex-direction: column;
+    gap: 10px; /* Menor espaçamento entre itens */
+    margin: 10px 0;
+  }
+
+  .logo {
+    width: 15vw; /* Reduz tamanho do logo */
+  }
+
+  .main-home {
+    padding: 20px;
+  }
+
+  .main-home img {
+    width: 30vw; /* Ajusta o tamanho da imagem principal */
+  }
+
+  .main-home h1 {
+    font-size: 2.5rem; /* Diminui o tamanho do título */
+    margin-bottom: 20px;
+  }
+
+  .buttons {
+    grid-template-columns: 1fr; /* Botões em uma única coluna */
+    gap: 20px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+  }
+}
+
+/* Tablets (576px a 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .home-header {
+    height: auto; /* Ajusta a altura do cabeçalho */
+    padding: 20px 15px;
+    text-align: center;
+  }
+
+  .logo {
+    width: 12vw; /* Ajusta tamanho do logo */
+  }
+
+  .main-home img {
+    width: 25vw; /* Ajusta a largura da imagem principal */
+  }
+
+  .main-home h1 {
+    font-size: 3.5rem; /* Ajusta tamanho do título */
+    margin-bottom: 30px;
+  }
+
+  .buttons {
+    grid-template-columns: 1fr; /* Botões em uma coluna */
+    gap: 30px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.3rem;
+  }
+}
+
+/* Dispositivos maiores (768px a 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .home-header {
+    padding: 20px 25px;
+  }
+
+  .logo {
+    width: 10vw; /* Ajusta tamanho do logo */
+  }
+
+  .main-home img {
+    width: 18vw; /* Ajusta largura da imagem */
+  }
+
+  .main-home h1 {
+    font-size: 4rem; /* Ajusta tamanho do título */
+    margin-bottom: 35px;
+  }
+
+  .buttons {
+    grid-template-columns: 1fr 1fr; /* Ajusta os botões para 2 colunas */
+    gap: 50px;
+  }
+
+  .btn {
+    padding: 16px;
+    font-size: 1.4rem;
+  }
+}
+
+/* Dispositivos grandes (1201px a 1400px) */
+@media (min-width: 1201px) and (max-width: 1400px) {
+  .home-header {
+    padding: 20px 30px;
+  }
+
+  .logo {
+    width: 8vw; /* Ajusta tamanho do logo */
+  }
+
+  .main-home img {
+    width: 15vw; /* Ajusta largura da imagem */
+  }
+
+  .main-home h1 {
+    font-size: 4.5rem; /* Ajusta tamanho do título */
+    margin-bottom: 40px;
+  }
+
+  .buttons {
+    grid-template-columns: 220px 220px; /* Mantém 2 colunas */
+    gap: 70px;
+  }
+}
+
+/* Telas extragrandes (acima de 1400px) */
+@media (min-width: 1401px) {
+  .home-header {
+    padding: 20px 40px;
+  }
+
+  .logo {
+    width: 6vw; /* Ajusta tamanho do logo */
+  }
+
+  .main-home img {
+    width: 12vw; /* Mantém tamanho da imagem */
+  }
+
+  .main-home h1 {
+    font-size: 5rem; /* Mantém tamanho do título */
+  }
+
+  .buttons {
+    grid-template-columns: 220px 220px; /* Mantém 2 colunas */
+    gap: 100px;
+  }
+}

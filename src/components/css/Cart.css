@@ -22,7 +22,7 @@
 .cart {
   width: 80%;
   max-width: 800px;
-  background-color: #A0522D; /* Marrom para o tema de madeira */
+  background-color: #A0522D;
   border-radius: 10px;
   padding: 20px;
   position: relative;
@@ -35,7 +35,7 @@
   display: block;
   width: 100%;
   height: 20px;
-  background-color: #8B4513; /* Cor da madeira mais escura */
+  background-color: #8B4513;
   position: absolute;
   top: -10px;
   left: 0;
@@ -129,4 +129,64 @@
 .material-symbols-outlined {
   display: block;
   margin-left: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 320px) {
+  .cart-container {
+    padding: 10px;
+  }
+
+  .cart {
+    width: 100%;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-item-image {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cart {
+    width: 90%;
+  }
+
+  .cart-item {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .cart {
+    width: 95%;
+  }
+}
+
+@media (max-width: 992px) {
+  .cart-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .cart {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .cart-container h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .cart-container h2 {
+    font-size: 2.2rem;
+  }
 }

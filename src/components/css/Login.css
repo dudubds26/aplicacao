@@ -95,3 +95,96 @@
   font-size: 14px;
   font-weight: 500;
 }
+
+/* Responsividade para telas menores */
+
+/* Smartphones pequenos (até 576px) */
+@media (max-width: 576px) {
+  .login-container {
+    padding: 20px; /* Adiciona um padding para melhorar a visualização */
+  }
+
+  .login-form {
+    width: 90%; /* Ajusta a largura do formulário */
+    padding: 20px; /* Reduz padding */
+  }
+
+  .login-button {
+    padding: 8px; /* Ajusta padding do botão */
+    font-size: 14px; /* Reduz tamanho da fonte */
+  }
+
+  .signup-link {
+    font-size: 13px; /* Diminui o tamanho do texto */
+    margin-top: 25px; /* Reduz o espaçamento superior */
+  }
+
+  .input-group input {
+    padding: 7px; /* Reduz o padding dos inputs */
+  }
+
+  .error {
+    font-size: 12px; /* Diminui tamanho da mensagem de erro */
+  }
+}
+
+/* Tablets (576px a 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .login-form {
+    width: 75%; /* Ajusta a largura do formulário */
+    padding: 25px; /* Reduz padding */
+  }
+
+  .login-button {
+    padding: 9px; /* Ajusta padding do botão */
+    font-size: 15px; /* Ajusta tamanho da fonte */
+  }
+
+  .signup-link {
+    font-size: 14px; /* Ajusta o tamanho do texto */
+  }
+
+  .error {
+    font-size: 13px; /* Ajusta tamanho da mensagem de erro */
+  }
+}
+
+/* Dispositivos maiores (768px a 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .login-form {
+    width: 60%; /* Ajusta a largura do formulário */
+    padding: 30px; /* Mantém o padding */
+  }
+
+  .login-button {
+    padding: 10px; /* Mantém padding do botão */
+    font-size: 16px; /* Mantém tamanho da fonte */
+  }
+
+  .signup-link {
+    font-size: 14px; /* Mantém o tamanho do texto */
+  }
+
+  .error {
+    font-size: 14px; /* Mantém tamanho da mensagem de erro */
+  }
+}
+
+/* Dispositivos grandes (acima de 1200px) */
+@media (min-width: 1201px) {
+  .login-form {
+    width: 340px; /* Mantém a largura original */
+  }
+
+  .login-button {
+    font-size: 16px; /* Mantém o tamanho original */
+  }
+
+  .signup-link {
+    font-size: 14px; /* Mantém o tamanho original */
+  }
+
+  .error {
+    font-size: 14px; /* Mantém o tamanho original */
+  }
+}

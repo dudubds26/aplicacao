@@ -71,3 +71,89 @@
 .checkout-button:hover {
   background-color: #005429;
 }
+
+/* Responsividade para telas menores */
+
+/* Smartphones pequenos (até 576px) */
+@media (max-width: 576px) {
+  .checkout-container {
+    padding: 10px; /* Reduz padding */
+  }
+
+  .checkout-details {
+    width: 100%; /* Faz a seção de detalhes ocupar 100% da largura */
+    padding: 15px; /* Reduz padding */
+  }
+
+  .checkout-form input, .checkout-form select {
+    font-size: 0.9rem; /* Diminui o tamanho da fonte */
+    padding: 8px; /* Reduz o padding */
+  }
+
+  .checkout-button {
+    padding: 10px; /* Reduz o padding do botão */
+    font-size: 1rem; /* Diminui o tamanho da fonte */
+  }
+
+  .checkout-items li {
+    padding: 8px; /* Diminui o padding dos itens */
+    font-size: 0.9rem; /* Diminui o tamanho da fonte */
+  }
+
+  .checkout-container h2 {
+    font-size: 1.5rem; /* Diminui o tamanho do título */
+  }
+}
+
+/* Tablets (576px a 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .checkout-details {
+    width: 90%; /* Ajusta a largura do formulário para caber melhor */
+    padding: 18px; /* Mantém padding adequado */
+  }
+
+  .checkout-button {
+    padding: 11px; /* Ajusta o padding do botão */
+    font-size: 1.1rem; /* Ajusta o tamanho da fonte */
+  }
+
+  .checkout-items li {
+    padding: 9px; /* Ajusta o padding dos itens */
+  }
+
+  .checkout-container h2 {
+    font-size: 1.75rem; /* Ajusta o tamanho do título */
+  }
+}
+
+/* Dispositivos maiores (768px a 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .checkout-details {
+    width: 80%; /* Ajusta a largura do formulário */
+    padding: 20px; /* Mantém o padding original */
+  }
+
+  .checkout-button {
+    padding: 12px; /* Mantém o padding do botão */
+    font-size: 1.2rem; /* Mantém o tamanho da fonte */
+  }
+
+  .checkout-container h2 {
+    font-size: 2rem; /* Ajusta o tamanho do título */
+  }
+}
+
+/* Dispositivos grandes (acima de 1200px) */
+@media (min-width: 1201px) {
+  .checkout-details {
+    width: 600px; /* Mantém a largura original */
+  }
+
+  .checkout-button {
+    font-size: 1.2rem; /* Mantém o tamanho original */
+  }
+
+  .checkout-container h2 {
+    font-size: 2rem; /* Mantém o tamanho original */
+  }
+}

@@ -87,13 +87,15 @@
 }
 
 .catalog-item {
-  width: 80%;
+  width: 80%; /* Mantém 80% do espaço disponível */
   padding: 15px;
   border: 1px solid #00A651;
   border-radius: 8px;
   background-color: #C1FF72;
   text-align: center;
-
+  display: flex; /* Usado para alinhar verticalmente */
+  flex-direction: column; /* Alinha os elementos verticalmente */
+  justify-content: space-between; /* Distribui espaço entre os elementos */
 }
 
 .catalog-item img {
@@ -125,14 +127,14 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
-  display: flex;
-  align-items: center;
+  display: flex; /* Usar flex para alinhar ícone e texto */
+  align-items: center; /* Centraliza verticalmente */
   font-weight: 600;
   font-size: 1.02rem;
 }
 
-.buy-button:hover {
-  background-color: #005429;
+.buy-button .cart-icon {
+  margin-left: 5px; /* Espaçamento entre texto e ícone */
 }
 
 .logo {
@@ -192,3 +194,126 @@
   width: 20px;
 }
 
+/* Responsividade para telas menores */
+
+/* Smartphones pequenos (até 576px) */
+@media (max-width: 576px) {
+  .catalog-header {
+    flex-wrap: wrap; /* Quebra a linha para elementos se ajustarem */
+    height: auto;
+    text-align: center;
+  }
+
+  .left-catalog,
+  .right-catalog {
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  .search-container {
+    width: 100%; /* Barra de pesquisa ocupa toda a largura */
+    margin-top: 10px;
+  }
+
+  .search-bar {
+    width: 100%; /* Ajusta a largura da barra de pesquisa */
+    font-size: 0.9rem;
+  }
+
+  .catalog-grid {
+    grid-template-columns: 1fr; /* Mostra 1 item por linha */
+    padding: 10px;
+    gap: 15px; /* Adiciona espaço entre os itens */
+  }
+
+  .catalog-item {
+    width: 90%; /* Ajusta a largura dos cards */
+    padding: 10px;
+  }
+
+  .catalog-item img {
+    width: 120px; /* Ajusta tamanho das imagens */
+  }
+}
+
+/* Tablets (576px a 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .catalog-header {
+    height: auto; /* Ajusta a altura do cabeçalho */
+    padding: 10px 15px;
+    font-size: 1.1rem;
+  }
+
+  .catalog-grid {
+    grid-template-columns: 1fr 1fr; /* Mostra 2 itens por linha */
+    padding: 15px;
+    gap: 15px; /* Adiciona espaço entre os itens */
+  }
+
+  .catalog-item {
+    width: 85%; /* Ajusta a largura dos cards */
+    padding: 12px;
+  }
+
+  .catalog-item img {
+    width: 140px; /* Ajusta tamanho das imagens */
+  }
+
+  .search-bar {
+    font-size: 0.95rem;
+  }
+}
+
+/* Dispositivos maiores (768px a 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+  .catalog-header {
+    padding: 15px 20px;
+    font-size: 1.2rem;
+  }
+
+  .catalog-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 itens por linha */
+    gap: 15px; /* Adiciona espaço entre os itens */
+  }
+
+  .catalog-item {
+    width: 80%; /* Ajusta a largura dos cards */
+  }
+
+  .catalog-item img {
+    width: 160px; /* Ajusta tamanho das imagens */
+  }
+}
+
+/* Dispositivos grandes (1201px a 1400px) */
+@media (min-width: 1201px) and (max-width: 1400px) {
+  .catalog-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 itens por linha */
+    gap: 15px; /* Adiciona espaço entre os itens */
+  }
+
+  .catalog-item {
+    width: 75%; /* Ajusta a largura dos cards */
+  }
+
+  .catalog-item img {
+    width: 180px; /* Ajusta tamanho das imagens */
+  }
+}
+
+/* Telas extragrandes (acima de 1400px) */
+@media (min-width: 1401px) {
+  .catalog-grid {
+    grid-template-columns: repeat(4, 1fr); /* Mantém 4 itens por linha */
+    gap: 15px; /* Adiciona espaço entre os itens */
+  }
+
+  .catalog-item {
+    width: 80%; /* Mantém a largura dos cards */
+  }
+
+  .catalog-item img {
+    width: 180px; /* Mantém tamanho das imagens */
+  }
+}
